@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Crimson+Text:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap');
+/*teléfonos*/
+
+@media only screen and (max-width: 450px){
+    /*navbar*/
+    .navbar{
+        bottom: 0;
+        width: 100vh;
+        height: 5rem;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+
+    .nav-link{
+        justify-content:space-evenly ;
+    }
+
+    .main{
+        margin: 0;
+    }
+    
+}
+/*tabletas y escritorio*/
+@media only screen and (min-width:450px){
+    /*navbar*/
+    .navbar{
+        right: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover{
+        width: 16rem;
+    }
+    
+    .navbar:hover .link-text{
+        display: block;
+    }
+    .navbar-nav{
+        flex-direction: column;
+    }
+}
+
+:root{
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+    background: rgb(0, 0, 0);
+}
+body::-webkit-scrollbar-thumb{
+    background: linear-gradient(#3965FF,#9327FF,#F808A6,#F4FF00);
+}
+main{
+    margin-right: 5rem;
+    padding: 1rem;
+
+}
+
+/*Comienza navbar*/
+.navbar{
+    position: fixed;
+    background-color: black;
+    transition: width 200ms ease;
+}
+.navbar img{
+    min-width: 1.5rem;
+    max-width: 3.5rem;
+    border:1px white solid;
+    border-radius: 50%;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    }
+.nav-item{
+    width: 100%;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    filter: opacity(0.7) hue-rotate(0);
+    transition: 200ms ease;
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+    background-color: #1c1c1c;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem;
+    color: white;
+}
+/*Finaliza nav bar*/
+
+
+
+body{
+    background:linear-gradient(#9327FF,#F808A6);
+    
+}
+
+body h1,p{
+    color: yellow;
+}
