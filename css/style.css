@@ -245,11 +245,13 @@ h1{
 
 /*experiencia section*/
 #experiencia-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    gap: 10px;
 
 }
 
 #experiencia-h3{
-    transform: rotate(-90deg);
     color: #FFF;
     text-align: center;
     font-family: Anonymous Pro;
