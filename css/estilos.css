@@ -72,7 +72,7 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     background-color: black;
     transition: width 200ms ease;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 .navbar img{
     width: 3rem;
@@ -120,70 +120,107 @@ body::-webkit-scrollbar-thumb{
     padding: 1% 0% 1% 1%;
     color: white;
     background-color: black;
+    
+    font-family: Anonymous Pro;
 }
 
 #main-gradient-background{
     border-radius: 5px;
     background: linear-gradient(108deg, #3965FF 0%, #9327FF 21.92%, #F808A6 52%, #F4FF00 92.19%);
     backdrop-filter: blur(2px);
-    padding: 5%;
+    padding: 3.5%;
 }
 #main-filtered-background{
+    min-height: 500px;
     border-radius: 5px;
     background: linear-gradient(108deg, rgba(57, 101, 255, 0.50) 0%, rgba(147, 39, 255, 0.50) 21.92%, rgba(248, 8, 166, 0.50) 52%, rgba(244, 255, 0, 0.50) 92.19%);
     box-shadow: 0px 4px 50px 0px rgba(0, 0, 0, 0.25) inset;
-    padding: 5%;
+    /* padding: 5%; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(426px, auto);
-    align-content: stretch;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
 }
 h1{
+    font-size: 6vw;
     color:#F4FF00;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+
 #main-column{
+    padding: 5%;
     display: flex;
+    height: 100%;
     flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
     align-items: center;
     align-content: center;
-    /* justify-content: flex-start; */
-    
+
 }
 #main-column div{
-    transform: rotate(-90deg);
-    margin: 25%;
-    /* width: 100%; */
-    /* height: 100%; */
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;;
+}
+#main-column h2{
+    font-size: 3vh;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
 }
 #main-column img{
     height:50px;
     margin-bottom: 15%;
 }
-#main-column h2{
-    font-size: medium;
+#ilustracion1{
+    grid-column: span 2;
 }
-
-/* #ilustracion1{
-    align-self: baseline;
+#ilustracion1 img{
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 #main-nombre{
+    grid-column: span 3;
     display: flex;
     flex-direction: column;
     align-content: center;
-} */
+    justify-content: center;
+    padding: 5% 5% 5% 10%;
+    margin: 10% 0;
+    justify-content: space-evenly;
+}
 
+#main-nombre h2,h3{
+    font-size: 2vw;
+}
+
+#main-nombre-button{
+    height: 40px;
+    width: 140px;
+    border-radius: 20px;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    background: rgba(57, 101, 255, 0.00);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 15px;
+    font-family: Anonymous Pro;
+    margin: 20px 0 0 100px;
+}
 /*section de proyectos*/
 
 main h2{
-    margin: 3% 0 3% 0;
+    font-family: Anonymous Pro;
+    margin: 5% 0 5% 0;
     font-style: italic;
     font-size: 25px;
 }
 
 #proyectos-section{
+    font-family: Anonymous Pro;
  /* margin-top: 5%;    */
 }
 #proyectos-princ{
@@ -191,8 +228,13 @@ main h2{
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     gap: 10px;
 }
-
-
+#proyectos-princ h3{
+    margin-bottom: 10px;
+}
+#main-btn{
+    height: 50px;
+    width: 120px;
+}
 #proyectos-div-princ-1{
     display: flex;
     flex-direction: column;
@@ -204,7 +246,6 @@ main h2{
     border-radius: 5px;
     background: linear-gradient(289deg, #9327FF 38.45%, #F808A6 105.41%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
 #proyectos-div-princ-2{
@@ -218,6 +259,15 @@ main h2{
     border-radius: 5px;
     background: linear-gradient(282deg, #F4FF00 -16.48%, #9327FF 82.61%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#proyectos-div-princ-2:hover{
+    background-image: linear-gradient(282deg, rgba(244, 255, 0, 0.20) -16.48%, rgba(244, 255, 0, 0.45) -16.47%, rgba(148, 41, 253, 0.50) 54.47%, rgba(147, 39, 255, 0.50) 57.19%),
+    url(../src/pinguinos/pinguinos1.svg);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
 }
 
 .btn-proyectos-git{
@@ -306,13 +356,13 @@ main h2{
     margin-bottom: 10px;
 }
 #experiencia-h3-div{
+    font-size: 30px;
     margin: 20px 0;
 }
 #experiencia-cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
     gap: 10px;
-    margin-left: 5rem;
 }
 .trabajo-card{
     display: flex;
@@ -420,6 +470,7 @@ main h2{
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-auto-flow: dense;
 }
+
 #habilidades-div ul{
     list-style-type: none;
     padding: 0;
@@ -433,10 +484,278 @@ main h2{
     justify-content: center;
     text-align: center;
 }
-.exceso-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white; /* Ajusta el color del texto según sea necesario */
+.exceso-div img {
+    width: 150px ;
+    margin-bottom: 10px;
   }
+
+#habilidades-tabla-div{
+    grid-column: span 2;
+    display: flex;
+    min-width: 350px;
+    padding: 2%;
+    border-radius: 10px;
+    background: radial-gradient(97.55% 97.55% at 50% 50%, rgba(57, 101, 255, 0.80) 0%, rgba(248, 8, 166, 0.80) 100%);
+}
+
+#habilidades-tabla{
+    font-family: Anonymous Pro;
+    width: 100%; 
+    min-width: 350px;
+    border-radius: 10px;
+    background: radial-gradient(97.55% 97.55% at 50% 50%, rgba(57, 101, 255, 0.64) 0%, rgba(248, 8, 166, 0.64) 100%);
+    border: 1px solid #FFF;
+    padding: 2%;
+}
+#habilidades-tabla table{
+
+    line-height: 1.7;
+    width: 100%; 
+    min-width: 350px;
+
+}
+
+#habilidades-tabla caption{
+    border-bottom: 2px solid rgb(190, 190, 190);
+    color: #FFF;
+    font-family: Anonymous Pro;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+#habilidades-tabla th {
+    font-size: 25px;
+    border-bottom: 2px solid rgb(190, 190, 190);
+    /* border-radius: 10px; */
+    padding: 10px 20px;
+    text-align: start;
+}
+
+#habilidades-tabla td{
+    font-size: 20px;
+    text-align: start;
+}
+
+.lenguaje-div{
+    border-radius: 5px;
+background: linear-gradient(114deg, #9326FF 15.95%, #F4FF00 142.93%);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#lenguajes{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-auto-flow: dense;
+}
+#lenguajes-img{
+    position: relative;
+}
+#lenguajes-img div{
+    padding-top: 30% ;
+
+}
+#lenguajes img{
+    width: 500px;
+    min-height: 400px;
+    object-fit: cover;
+}
+.lenguaje-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 200px;
+    min-width: 250px;
+    margin-top: 30px;
+    color: #F4FF00;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Anonymous Pro;
+    font-size: 25px;
+    text-align: center;
+}
+.lenguajes-btn{
+    width: 150px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: rgba(57, 101, 255, 0.00);
+    border: 1px solid #F4FF00;
+    margin-top: 10px;
+}
+.lenguajes-btn a{
+    color:  #F4FF00;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+#formacion{
+    padding: 3%;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(244, 255, 0, 0.80) 0%, rgba(248, 8, 166, 0.80) 100%);
+}
+
+#formacion-div{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: #000;
+    padding: 4%;
+    font-family: Anonymous Pro;
+}
+#formacion-div-h3{
+    display: flex;
+    
+    text-align: start;
+}
+#formacion-div h3{
+    width: 100%;
+    height: 45px;
+    padding: 1%;
+    margin-right: 10px;
+    border-radius: 35px;
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+    color: #FFF;
+    font-size: 25px;
+    font-family: Anonymous Pro;
+}
+
+#formacion-div img{
+    width: 30px;
+    margin: 15px;
+}
+
+.formacion-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.formacion-texto{
+    margin-left: 3.5rem;
+    margin-top: 5px;
+}
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: linear-gradient(92deg, rgba(244, 255, 0, 0.80) -17%, rgba(248, 8, 166, 0.80) 50.54%, rgba(57, 101, 255, 0.80) 119.51%);
+}
+
+#contactame-div{
+    display: flex;
+    align-items: center;
+    min-height: 70px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#contactame-div h3{
+    margin-left: 4rem;
+    color: #F4FF00;
+    font-family: Anonymous Pro;
+    font-size: 45px;
+}
+
+#contacto-div{
+    padding: 4%;
+}
+.input input{
+    margin-bottom: 10px;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(92deg, rgba(244, 255, 0, 0.56) -17%, rgba(248, 8, 166, 0.56) 50.54%, rgba(57, 101, 255, 0.56) 119.51%);
+    backdrop-filter: blur(2px);
+
+}
+
+.input input::placeholder{
+    color: #FFF;
+    font-size: 20px;
+    font-family: Anonymous Pro;
+    opacity: 80%;
+}
+
+.input{
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100.523%; /* 25.131px */
+    font-family: Anonymous Pro;
+}
+
+.input textarea{
+    margin-bottom: 10px;
+    height: 200px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(92deg, rgba(244, 255, 0, 0.56) -17%, rgba(248, 8, 166, 0.56) 50.54%, rgba(57, 101, 255, 0.56) 119.51%);
+    backdrop-filter: blur(2px);
+}
+
+.input textarea::placeholder{
+    color: #FFF;
+    font-size: 20px;
+    font-family: Anonymous Pro;
+    opacity: 80%;
+}
+
+#form-btn{
+    color: #FFF;
+    font-family: Anonymous Pro;
+    font-size: 22px;
+    margin-left: 10rem;
+    height: 45px;
+    width:  180px;
+    border-radius: 22.5px;
+    border: 1px solid #FFF;
+    background: linear-gradient(92deg, rgba(244, 255, 0, 0.56) -17%, rgba(248, 8, 166, 0.56) 119.51%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.footer{
+    padding: 15px 0 35px 20px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 25px;
+    font-family: Anonymous Pro;
+    font-style: normal;
+}
+
+[data-animation="fade"]{
+    opacity:0 ;
+    transform: translate(100%);
+    transition: .6s  ease-in .3s;
+    --opacity: 1;
+    --transform: translate(0);
+}
+
+[data-animation="show"]{
+    opacity:0 ;
+    transform: translate(100%);
+    transition: .6s  ease-in .3s;
+    --opacity: 1;
+    --transform: scale(1);
+}
+
+[data-animation="up"]{
+    opacity:0 ;
+    transform: translateY(100%);
+    transition: .6s  ease-in .3s;
+    --opacity: 1;
+    --transform: translateY(0);
+}
+
+.unset{
+    opacity: var(--opacity);
+    transform: var(--transform);
+}
