@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lizeth Bravo Acevedo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,28 +53,29 @@
         <section id="portada">
             <div id="main-gradient-background">
                 <div id="main-filtered-background">
-                    <div id="main-column" class="animacion_element" data-animation="show">
+                    <div id="main-column" >
                         <div>
-                            <h2>JAVA FULL STACK <br/>DEVELOPER JR.</h2>
+                            <h2 class="hidden1">JAVA FULL STACK <br/>DEVELOPER JR.</h2>
                         </div>
                         <a href="https://github.com/lizybravo" target="_blank">
-                            <img src="./src/github.png" alt="github link">
+                            <img src="./src/github.png" alt="github link" class="hidden1">
                         </a>
                         <a href="https://www.linkedin.com/in/lizeth-bravo-acevedo/" target="_blank">
-                            <img src="./src/linkedin.png" alt="linkedin link">
+                            <img src="./src/linkedin.png" alt="linkedin link" class="hidden2">
                         </a>
                     </div>
     
                     <div id="ilustracion1">
-                        <img src="./src/ilustracion1.png" alt="ilustración 1">
-                    </div>    
+                        <img src="./src/ilustracion1.png" alt="ilustración 1" class="hidden1">
+                    </div>
+                    
                    
-                    <div id="main-nombre">
-                    <h3>La creatividad cobra vida...</h3>
-                    <h1>&lt;h1&gt;<br/>portafolio<br/>&lt;/h1&gt;</h1>
+                    <div id="main-nombre" >
+                    <h3 class="hidden1">La creatividad cobra vida...</h3>
+                    <h1 class="hidden1">&lt;h1&gt;<br/>portafolio<br/>&lt;/h1&gt;</h1>
                     <h2>Lizeth Bravo Acevedo</h2>
                     <a href="https://drive.google.com/file/d/1qq-FDJyF0lbIs32R52ANKyjDiMA7Pn1_/view?usp=sharing" target="_blank">
-                        <button id="main-nombre-button">Descargar CV</button>
+                        <button class="hidden1" id="main-nombre-button">Descargar CV</button>
                     </a>
                    </div>
                 </div>
@@ -83,29 +85,100 @@
             <h2>Parte I. Tejedora de sueños en pixeles.</h2>
             <div id="proyectos-princ">
                 <div id="proyectos-div-princ-1">
-                    <h3>&lt;Baby Devs&gt;</h3>
+                    <h3 class="hidden1">&lt;Baby Devs&gt;</h3>
                     <div>
                         <button class="btn-proyectos-git">
-                            <a href="">Ver en GitHub</a>
+                            <a href="https://github.com/BAteneacf/ProyectoIntegradorEquipo3" target="_blank">Ver en GitHub</a>
                         </button>
-                        <button class="btn-proyectos">
-                            <a href="">Ver proyecto</a>
+                        <button type="button" class="btn-proyectos btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <!-- <a href=""></a> -->
+                            Ver proyecto
                         </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="staticBackdropLabel">Baby Devs</h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <p>
+                                            El proyecto surge para ayudar a estudiantes interesados en aprender programación o fortalecer sus conocimientos en TI. Atendemos la falta de educación personalizada y la limitación de tiempo en la educación convencional, ofreciendo un enfoque flexible y específico. 
+                                            <br/>El objetivo es facilitar el aprendizaje y la resolución de dudas en temas como: Algoritmos, HTML y CSS.
+                                            
+
+                                        </p>
+                                    </div>
+                                    <div class="proyectos-img">
+                                        <div class="proyectos-img1">
+                                            <img src="./src/babydevs/babydevs1.svg" alt="">
+                                            <img src="/src/babydevs/babydevs2.svg" alt="">
+                                        </div>
+                                        <div class="proyectos-img2">
+                                            <img src="./src/babydevs/babydevs3.svg" alt="">
+                                            <img src="./src/babydevs/babydevs4.svg" alt="">
+                                        </div>
+                                        <div class="proyectos-img3">
+                                            <img src="./src/babydevs/babydevs5.svg" alt="">
+                                            <img src="./src/babydevs/babydevs6.svg" alt="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="proyectos-div-princ-2">
-                    <h3>&lt;TodosxlosPingüinos&gt;</h3>
+                    <h3 class="hidden1">&lt;TodosxlosPingüinos&gt;</h3>
                     <div>
                         <button class="btn-proyectos-git">
-                            <a href="">Ver en GitHub</a>
+                            <a href="https://github.com/lizybravo/TodosXlosPinguinos" target="_blank">Ver en GitHub</a>
                         </button>
-                        <button class="btn-proyectos">
-                            <a href="">Ver proyecto</a>
+                        <button type="button" class="btn-proyectos btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                            <!-- <a href=""></a> -->
+                            Ver proyecto
                         </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title fs-5" id="staticBackdropLabel2"><TodosxlosPingüinos></h2>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div>
+                                        <p>
+                                            El proyecto evolucionó para convertirse en un espacio dedicado a crear conciencia y proporcionar información sobre la conservación de los pingüinos.
+                                            <br/> A través de este sitio, buscamos educar a los visitantes sobre la importancia de preservar el hábitat de estas fascinantes aves marinas y fomentar un mayor entendimiento sobre los desafíos que enfrentan. Nuestro objetivo es inspirar acciones positivas y promover la participación en iniciativas de conservación para garantizar un futuro sostenible para los pingüinos y su entorno.
+                                        </p>
+                                    </div>
+                                    <div class="proyectos-img">
+                                        <div class="proyectos-img1">
+                                            <img src="./src/pinguinos/pinguinos1.svg" alt="">
+                                            <img src="./src/pinguinos/pinguinos2.svg" alt="">
+                                        </div>
+                                        <div class="proyectos-img2">
+                                            <img src="./src/pinguinos/pinguinos3.svg" alt="">
+                                            <img src="./src/pinguinos/pinguinos4.svg" alt="">
+                                        </div>
+                                        <div class="proyectos-img3">
+                                            <img src="./src/pinguinos/pinguinos5.svg" alt="">
+                                            <img src="./src/pinguinos/pinguinos6.svg" alt="">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div id="proyectos-sec">
+            <!-- <div id="proyectos-sec">
                 <div class="proyectos-div-sec">
                     <h3>Título del proyecto</h3>
                     <div>
@@ -116,8 +189,9 @@
                             <a href="">Ver proyecto</a>
                         </button>
                     </div>
-                </div>
-                <div class="proyectos-div-sec">
+                </div> -->
+ 
+                <!-- <div class="proyectos-div-sec">
                     <h3>Título del proyecto</h3>
                     <div>
                         <button class="btn-proyectos-git">
@@ -127,18 +201,7 @@
                             <a href="">Ver proyecto</a>
                         </button>
                     </div>
-                </div>
-                <div class="proyectos-div-sec">
-                    <h3>Título del proyecto</h3>
-                    <div>
-                        <button class="btn-proyectos-git">
-                            <a href="">Ver en GitHub</a>
-                        </button>
-                        <button class="btn-proyectos">
-                            <a href="">Ver proyecto</a>
-                        </button>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </article>
     
@@ -156,83 +219,120 @@
             </div>
                 <div id="experiencia-cards">
                     <div  class="trabajo-card">
-                        <h3>Puesto</h3>
-                        <p>Empresa</p>
-                        <p>Temporalidad</p>
-                        <button class="btn-experiencia">
-                            <a href="">Ver más</a>
-                        </button>
+                        <div>
+                            
+                        <h3>SCRUM Master  Desarrollador Java Full Stack</h3>
+                        <p>Baby Devs</p>
+                        <p>Octubre 2023 - Diciembre 2023</p>
+                        </div>
+                        <ul class="descripcion-trabajo">
+                            <li>
+                                Gestioné el backlog y ayudé al equipo a resolver dificultades.
+                            </li>
+                            <li>
+                                Desarrollé front-end y back-end para un sitio de asesorías para estudiantes de TI.
+                            </li>
+                       </ul> 
                     </div>
                     <div class="trabajo-card">
-                        <h3>Puesto</h3>
-                        <p>Empresa</p>
-                        <p>Temporalidad</p>
-                        <button class="btn-experiencia">
-                            <a href="">Ver más</a>
-                        </button>
+                        <div>
+                            
+                        <h3>Barista <br/> Gerente de Sucursal</h3>
+                        <p>Rikka - Boba Tea and Coffee House</p>
+                        <p>Noviembre 2021 - Marzo 2023</p>
+                        </div>
+                        <ul class="descripcion-trabajo">
+                            <li>
+                                Implementé Lean para reducir el tiempo de entrega de pedidos de 12 a 4 minutos en promedio.
+                            </li>
+                            <li>
+                                Automaticé mediante la programación de macros en Excel los ajustes de costos y precios según la inflación.
+                            </li> 
+                            <li>
+                                Contraté, capacité y lideré un equipo de baristas, mostrando desde el ejemplo, los estándares de preparación y atención al
+cliente.
+                            </li>
+                        </ul>
                     </div>
                     <div class="trabajo-card">
-                        <h3>Puesto</h3>
-                        <p>Empresa</p>
-                        <p>Temporalidad</p>
-                        <button class="btn-experiencia">
-                            <a href="">Ver más</a>
-                        </button>
+                        <div>
+                            
+                        <h3>Asistente de Investigación</h3>
+                        <p>Taller de Vivienda UAM Xochimilco</p>
+                        <p>Marzo 2021 - Noviembre 2021</p>
+                        </div>
+                        <ul class="descripcion-trabajo">
+                            <li>
+                                Investigué sobre arquitectura social, en especial en la relación de la vivienda con la salud, el espacio y el género.
+                            </li>
+                            <li>
+                                Colaboré con Pfizer y la Secretaría de Salud en crear e implementar un plan de capacitación donde influí en la integración
+de una perspectiva de género.
+                            </li>
+                        </ul>
                     </div>
                     <div class="trabajo-card">
-                        <h3>Puesto</h3>
-                        <p>Empresa</p>
-                        <p>Temporalidad</p>
-                        <button class="btn-experiencia">
-                            <a href="">Ver más</a>
-                        </button>
+                        <div>
+                            
+                        <h3>Becaria de Diseño Estructural</h3>
+                        <p>Arcicastro Diseño Estructural</p>
+                        <p>Marzo 2019 - Septiembre 2019</p>
+                        </div>
+                        <ul class="descripcion-trabajo">
+                            <li>
+                                Revisé datos y fórmulas de análisis estructural en ETABS y excel, verificando su precisión manualmente.
+                            </li>
+                            <li>
+                                Realicé ajustes y modificaciones en planos digitales utilizando AutoCAD.
+                            </li>
+                        </ul>
                     </div>
-                <!--    <div class="trabajo-card">
-                        <h3>Puesto</h3>
-                        <p>Empresa</p>
-                        <p>Temporalidad</p>
-                        <button class="btn-experiencia">
-                            <a href="">Ver más</a>
-                        </button>
-                    </div>-->
                 </div>
         </article>
     
         <article id="about-section" class="article">
             <div id="about-div">
                 <div id="about-section-div">
-                    <img src="./src/foto-mia.jpeg" alt="foto mía">
+                    <img class="hidden1" src="./src/foto-mia.jpeg" alt="foto mía">
                     <div id="about-texto">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates qui error voluptate magni reprehenderit. Deleniti iusto facilis quis rerum, rem reiciendis odit sequi impedit dicta aperiam, iste consequatur placeat veniam!</p>
+                        <p>
+                            Soy una apasionada desarrolladora Java Full Stack Jr. con sólidas habilidades en adaptación, análisis, gestión y liderazgo, experiencia
+tanto en front-end como en back-end.
+                        </p>
                     </div>
                 </div>
                 <div id="about-section-div2">
-                    <h2>¿Quién soy?</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quam unde distinctio exercitationem, quia modi quas, aliquam placeat aperiam delectus ut perspiciatis. Velit fugit commodi reiciendis et dolores recusandae cupiditate.</p>
+                    <h2 class="hidden1">¿Quién soy?</h2>
+                    <p>Mi formación incluye el campo de la arquitectura, donde aprendí las bases del pensamiento lógico, el diseño, el trabajo en equipo y la resolución de problemas. Desde el bachillerato he tenido interés en la innovación y la tecnología, estuve en el club de robótica y ahí aprendí Arduino. Desde entonces no he dejado de lado ese interés, por lo que he siempre buscado recursos para continuar aprendiendo como un curso completo de Java y uno de Git en Udemy, lo que me llevó a inscribirme a un bootcamp intensivo para fortalecer mi habilidades, donde obtuve conocimiento y experiencia prácticos en HTML, CSS, JavaScript y Java, lo que finalmente me permitió participar en el equipo de desarrollo de una plataforma de e-commerce y postularme a este puesto.
+                    </p>
                     <div id="about-texto2">
-                        <img src="./src/ilustracion2.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officiis fugiat at vitae fugit, molestiae ut minus assumenda id eaque nisi harum dignissimos itaque consectetur aperiam nemo nulla asperiores obcaecati?</p>
+                        <img class="hidden1" src="./src/ilustracion2.png" alt="">
+                        <p>He tenido ya experiencia tanto como desarrolladora como Scrum Master, lo que me permite tener una visión ampliada de recursos y conocimientos así como de la gestión de un proyecto, sin invalidar que la experiencia que he adquirido en mi back profesional puede ser perfectamente transferible a un nuevo puesto, como lo es el liderazgo y trabajo en equipo.
+                            <br/>
+                            <br/>
+                            En resumen, mi bagaje académico y profesional, combinado con mi disposición para aprender y adaptarme, me posiciona como un candidato comprometido y versátil, listo para contribuir al éxito de nuevos proyectos y desafíos en el ámbito de desarrollo de software.
+                        </p>
                     </div>
                 </div>
             </div> 
             <div id="habilidades-div">
                 <ul>
-                    <li>
+                    <li class="hidden3">
                         <div class="exceso-div">
                             <img src="./src/exceso1.svg" alt="exceso info">
                         </div>
                     </li>
-                    <li>
+                    <li class="hidden3">
                         <div class="exceso-div">
                             <img src="./src/exceso2.svg" alt="exceso info">
                         </div>
                     </li>
-                    <li>
+                    <li class="hidden3">
                         <div class="exceso-div">
                             <img src="./src/exceso3.svg" alt="exceso info">
                         </div>
                     </li>
-                    <li>
+                    <li class="hidden3">
                         <div class="exceso-div">
                             <img src="./src/exceso4.svg" alt="exceso info">
                         </div>
@@ -240,57 +340,60 @@
                 </ul>
                 <div id="habilidades-tabla-div">
                     <div  id="habilidades-tabla">
-                        <table>
+                        <table class="hidden1">
                             <caption>
-                                INFORMACIÓN DE HABILIDADES
-                              </caption>
+                              INFORMACIÓN DE HABILIDADES
+                            </caption>
                             <tr>
-                                <th class="habilidades-head" colspan="2">Idiomas</th>
+                              <th class="habilidades-head" colspan="2">Idiomas</th>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Español</td>
-                                <td>Nativo</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Español</td>
+                              <td>Nativo</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inglés</td>
-                                <td>B2 / Intermedio</td>
-                            </tr><tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coreano</td>
-                                <td>N1 / Básico</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inglés</td>
+                              <td>B2 / Intermedio</td>
                             </tr>
                             <tr>
-                                <th colspan="2">Softwares</th>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Coreano</td>
+                              <td>N1 / Básico</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Office</td>
-                            <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figma</td>
+                              <th colspan="2">Softwares</th>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adobe XD, Photoshop, Illustrator</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft Office</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asana</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Figma</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trello</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Adobe XD, Photoshop, Illustrator</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutoCAD</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Asana</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SketchUp</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trello</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canva</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AutoCAD</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clip Studio Paint</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SketchUp</td>
                             </tr>
                             <tr>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notion</td>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Canva</td>
                             </tr>
-                        </table>
+                            <tr>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Clip Studio Paint</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Notion</td>
+                            </tr>
+                          </table>
+                          
                     </div>
                 </div>
             </div>
@@ -302,41 +405,42 @@
                 </div>
                 <div class="lenguajes-column">
                     <div class="lenguaje-div">
-                        <h3>Lenguaje</h3>
+                        <h3>HTML</h3>
                         <button class="lenguajes-btn">
-                            <a href="#">Ver en GitHub</a>
+                            <a href="https://github.com/lizybravo" target="_blank">Ver en GitHub</a>
                         </button>
                     </div>
                     <div class="lenguaje-div">
-                        <h3>Lenguaje</h3>
+                        <h3>CSS</h3>
                         <button class="lenguajes-btn">
-                            <a href="#">Ver en GitHub</a>
+                            <a href="https://github.com/lizybravo" target="_blank">Ver en GitHub</a>
                         </button>
                     </div>
                     <div class="lenguaje-div">
-                        <h3>Lenguaje</h3>
+                        <h3>                    <h3>JavaScript</h3>
+                    </h3>
                         <button class="lenguajes-btn">
-                            <a href="#">Ver en GitHub</a>
+                            <a href="https://github.com/lizybravo" target="_blank">Ver en GitHub</a>
                         </button>
                     </div>
                 </div>
                 <div class="lenguajes-column">
                 <div class="lenguaje-div">
-                    <h3>Lenguaje</h3>
+                    <h3>Java</h3>
                     <button class="lenguajes-btn">
-                        <a href="#">Ver en GitHub</a>
+                        <a href="https://github.com/lizybravo" target="_blank">Ver en GitHub</a>
                     </button>
                 </div>
                 <div class="lenguaje-div">
-                    <h3>Lenguaje</h3>
+                    <h3>Spring Boot</h3>
                     <button class="lenguajes-btn">
-                        <a href="#">Ver en GitHub</a>
+                        <a href="https://github.com/lizybravo" target="_blank">Ver en GitHub</a>
                     </button>
                 </div>
                     <div class="lenguaje-div">
-                        <h3>Lenguaje</h3>
+                        <h3>Bootstrap</h3>
                         <button class="lenguajes-btn">
-                            <a href="#">Ver en GitHub</a>
+                            <a href="https://github.com/lizybravo" target="_blank">Ver en GitHub</a>
                         </button>
                     </div>
                 </div>
@@ -344,16 +448,16 @@
             <!-- <div>
                 <img src="" alt="">
             </div> -->
-            <div id="formacion">
+            <div id="formacion" >
                 <div id="formacion-div">
-                    <div id="formacion-div-h3">
+                    <div id="formacion-div-h3" >
                         <h3>¿Dónde estudié?</h3>
                         <img src="./src/lupa.png" alt="lupa icon">
                     </div>
                     <div>
                         <div class="formacion-item">
                             <img src="./src/lupa.png" alt="lupa icon">
-                            <p>
+                            <p class="hidden3">
                                 Bootcamp en Desarrollo Java Full stack
                             </p>
                         </div>                    
@@ -366,26 +470,26 @@
                     <div>
                     <div class="formacion-item">
                         <img src="./src/lupa.png" alt="lupa icon">
-                        <p>
-                            Bootcamp en Desarrollo Java Full stack
+                        <p class="hidden3">
+                            Bootcamp Mujer Digital Java y AWS Practitioner
                         </p>
                     </div>
                         <div class="formacion-texto">
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generation México, Septiembre 2023 - Diciembre 2023
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Junior Achievement México, Julio 2023 - Diciembre 2023
                             </p>
                         </div>
                     </div>
                     <div>
                         <div class="formacion-item">
                          <img src="./src/lupa.png" alt="lupa icon">
-                          <p>
-                           Bootcamp en Desarrollo Java Full stack
+                          <p class="hidden3">
+                            Licenciatura en Arquitectura
                           </p>
                         </div> 
                         <div class="formacion-texto">
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Generation México, Septiembre 2023 - Diciembre 2023
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Universidad Autónoma Metropolitana Xochimilco, (Trunca), 2019-2021
                             </p>
                         </div>
                    </div>
@@ -400,22 +504,72 @@
                     <h3>Contáctame</h3>
                 </div>
                 <div id="contacto-div">
-                    <form action="">
-                        <div class="input">
-                            <input type="text" name="name" id="name" placeholder="&nbsp;&nbsp;Nombre">
+                    <div class="p-4 container_contacto">
+                        <form action="" class="formulario" id="formulario">
+                
+                            <!-- Grupo: Nombre -->
+                            <div class="formulario__grupo" id="grupo__nombre">
+                                <label for="nombre" class="formulario__label">Nombre</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Este campo solo permite ingresar letras</p>
+                            </div>
+                
+                
+                            <!-- Grupo: Correo Electronico -->
+                            <div class="formulario__grupo" id="grupo__correo">
+                                <label for="correo" class="formulario__label">Correo Electrónico</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="email" class="formulario__input" name="correo" id="correo"
+                                        placeholder="correo@dominio.com" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Caracteres permitidos: letras, números, puntos, guión y guión bajo</p>
+                            </div>
+                
+                            <!-- Grupo: Teléfono -->
+                            <div class="formulario__grupo" id="grupo__telefono">
+                                <label for="telefono" class="formulario__label">Teléfono</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Este campo solo permite ingresar 10 dígitos</p>
+                            </div>
+                
+                            <!--Grupo: Mensaje-->
+                            <div class="formulario__grupo" id="grupo__mensaje">
+                                <label for="mensaje" class="formulario__label">Mensaje</label>
+                                <div class="formulario__grupo-input">
+                                    <input type="text" class="formulario__input" name="mensaje" id="mensaje"
+                                        placeholder="Escribe tu mensaje" required>
+                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                </div>
+                                <p class="formulario__input-error">Este campo solo permite ingresar letras</p>
+                            </div>
+                
+                            <!-- Botton-->
+                
+                            <div class="formulario__grupo formulario__grupo-btn-enviar" id="boton">
+                                <input type="submit" class="btn btn-success" id="button" value="Enviar" >
+                                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">¡Formulario enviado exitosamente!</p>
+                            </div>
+                
+                            <div id="alerts">
+                            </div>
+                
+                        </form>
+                        <script type="text/javascript"
+                        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                      
+                      <script type="text/javascript">
+                        emailjs.init('icisLYO108IQKMlKQ')
+                      </script>
+                        <img src="./src/ilustracion1.png" alt="">
                         </div>
-                        <div class="input">
-                            <input type="email" name="email" id="email" placeholder="&nbsp;&nbsp;Email">
-                        </div>
-                        <div class="input">
-                            <input type="tel" name="phone" id="phone" placeholder="&nbsp;&nbsp;Teléfono">
-                        </div>
-                        <div class="input">
-                            <textarea name="message" id="message" cols="30" rows="5" placeholder="&nbsp;&nbsp;Mensaje"></textarea>
-    
-                        </div>
-                        <input id="form-btn" type="submit" class="btn" value="Enviar">
-                    </form>
+                
                 </div>
             </div>
         </article>
@@ -428,6 +582,7 @@
         </p>
     </footer>
 
-    <script src="./js/main.js></script>
+    <script src="./js/main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

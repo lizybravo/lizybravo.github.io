@@ -117,7 +117,7 @@ body::-webkit-scrollbar-thumb{
 
 /*main*/
 .main{
-    padding: 1% 0% 1% 1%;
+    padding: 0% 0% 1% 1%;
     color: white;
     background-color: black;
     
@@ -128,7 +128,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 5px;
     background: linear-gradient(108deg, #3965FF 0%, #9327FF 21.92%, #F808A6 52%, #F4FF00 92.19%);
     backdrop-filter: blur(2px);
-    padding: 3.5%;
+    padding: 4%;
 }
 #main-filtered-background{
     min-height: 500px;
@@ -140,14 +140,14 @@ body::-webkit-scrollbar-thumb{
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
 }
 h1{
-    font-size: 6vw;
+    font-size: 5vw;
     color:#F4FF00;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
 #main-column{
-    padding: 5%;
+    padding: 3%;
     display: flex;
     height: 100%;
     flex-direction: column;
@@ -155,7 +155,6 @@ h1{
     text-align: center;
     align-items: center;
     align-content: center;
-
 }
 #main-column div{
     flex:1;
@@ -165,13 +164,16 @@ h1{
     text-align: start;;
 }
 #main-column h2{
-    font-size: 3vh;
+    font-size: 2.5vh;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
 }
 #main-column img{
     height:50px;
     margin-bottom: 15%;
+}
+#main-column a:last-child{
+    margin-bottom: 3%px;
 }
 #ilustracion1{
     grid-column: span 2;
@@ -201,7 +203,6 @@ h1{
     height: 40px;
     width: 140px;
     border-radius: 20px;
-    border-radius: 30px;
     border: 1px solid #FFF;
     background: rgba(57, 101, 255, 0.00);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -209,6 +210,11 @@ h1{
     font-size: 15px;
     font-family: Anonymous Pro;
     margin: 20px 0 0 100px;
+}
+#main-nombre-button:hover{
+    width: 250px;
+    transition: .5s;
+    border:1px solid #F4FF00;
 }
 /*section de proyectos*/
 
@@ -247,6 +253,38 @@ main h2{
     background: linear-gradient(289deg, #9327FF 38.45%, #F808A6 105.41%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+#proyectos-div-princ-1:hover{
+    background-image: linear-gradient(282deg, rgba(244, 255, 0, 0.20) -16.48%, rgba(244, 255, 0, 0.45) -16.47%, rgba(148, 41, 253, 0.50) 54.47%, rgba(147, 39, 255, 0.50) 57.19%),
+    url(../src/babydevs/babydevsportada.svg);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    background-position: center;
+}
+
+.proyectos-img{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+}
+.proyectos-img div{
+    display: flex;
+    flex-direction: row;
+}
+.proyectos-img img{
+    width: 150px;
+    margin: 5px;
+}
+
+.proyectos-img1{
+margin-left: 2rem;
+
+}
+.proyectos-img3{
+    margin-left: 1rem;
+
+}
 
 #proyectos-div-princ-2{
     display: flex;
@@ -272,7 +310,7 @@ main h2{
 
 .btn-proyectos-git{
     height: 40px;
-    width: 120px;
+    width: 140px;
     border-radius: 30px;
     border: 1px solid #FFF;
     background: rgba(57, 101, 255, 0.00);
@@ -284,19 +322,27 @@ main h2{
 }
 
 .btn-proyectos{
-    height: 40px;
-    width: 120px;
-    border-radius: 30px;
-    border: 1px solid #FFF;
-    background: rgba(255, 255, 255, 0.30);
-}
-.btn-proyectos a{
     text-decoration: none;
     color: #9326FF;
     font-size: 15px;
     font-family: Anonymous Pro;
     font-style: normal;
     font-weight: 700;
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.30);
+}
+.modal-content{
+    border-radius: 5px;
+    background: linear-gradient(137deg, rgba(147, 39, 255, 0.90) 29.28%, rgba(244, 255, 0, 0.90) 121.12%);
+}
+
+.modal-body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    gap: 10px;
 }
 
 #proyectos-sec{
@@ -350,8 +396,9 @@ main h2{
 }
 #experiencia-h3{
     font-family: Anonymous Pro;
-    font-size: 50px;
+    font-size: 3vw;
     font-style: normal;
+    margin-top: 3rem;
     margin-left: 5rem;
     margin-bottom: 10px;
 }
@@ -364,8 +411,12 @@ main h2{
     grid-template-columns: repeat(auto-fit, minmax(450px,1fr));
     gap: 10px;
 }
+
+
 .trabajo-card{
     display: flex;
+    position: relative;
+    transition: all .3s ease;
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -377,6 +428,57 @@ main h2{
     /* margin-top: 10px; */
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.trabajo-card div{
+    box-shadow: 0 60px 60px -60px rgba(0,30,255,0.5);
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+}
+.descripcion-trabajo{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: .3s ease;
+    opacity: 0;
+}
+.descripcion-trabajo:hover{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.trabajo-card:hover{
+    transform: 
+        perspective(500px)
+        rotateX(10deg)
+        translateY(-5%)
+        translateZ(0)
+        ;
+    opacity: 1;
+}
+
+.trabajo-card::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 5%,
+        rgba(0,0,0,0.5) 40%,
+        rgba(0,0,0)95%
+    );
+    opacity: 0;
+    transition: .3s ease;
+}
+.trabajo-card:hover::before{
+    opacity: 1;
+}
+
 .trabajo-card h3{
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -386,34 +488,8 @@ main h2{
     color: #F4FF00;
     margin-bottom: 5px;
 }
-.trabajo-card p{
-    text-align: center;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Anonymous Pro;
-    font-size: 15px;
-    font-style: normal;
-    color: #F4FF00;
-    line-height: 20px;
-}
 
-.btn-experiencia{
-    width: 120px;
-    height: 40px;
-    border: 1px solid #F4FF00;
-    background: rgba(57, 101, 255, 0.00);
-    border-radius: 30px;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    margin-top: 2%;
-}
 
-.btn-experiencia a{
-    color: #F4FF00;
-    text-align: center;
-    font-family: Anonymous Pro;
-    font-size: 15px;
-    font-style: normal;
-    text-decoration: none;
-}
 
 /*about-section*/
 #about-section{
@@ -426,14 +502,16 @@ main h2{
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
     grid-auto-flow: dense;
-    margin-top: 15%;
+    margin-top: 5%;
+}
+#about-section-div{
+    display: flex;
+    flex-direction: column;
 }
 
-
 #about-section-div img{
-    height: 70%;
+    height: 100%;
     width: 100%;
-    /* max-width: 390px; */
     object-fit: cover;
 }
 
@@ -455,6 +533,8 @@ main h2{
 
 #about-texto{
     width: 100%;
+    padding: 5%;
+    margin-top: 10px;
 }
 
 #about-texto2{
@@ -508,7 +588,7 @@ main h2{
     padding: 2%;
 }
 #habilidades-tabla table{
-
+    caption-side: top;
     line-height: 1.7;
     width: 100%; 
     min-width: 350px;
@@ -519,13 +599,13 @@ main h2{
     border-bottom: 2px solid rgb(190, 190, 190);
     color: #FFF;
     font-family: Anonymous Pro;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
 
 }
 
 #habilidades-tabla th {
-    font-size: 25px;
+    font-size: 20px;
     border-bottom: 2px solid rgb(190, 190, 190);
     /* border-radius: 10px; */
     padding: 10px 20px;
@@ -533,7 +613,7 @@ main h2{
 }
 
 #habilidades-tabla td{
-    font-size: 20px;
+    font-size: 15px;
     text-align: start;
 }
 
@@ -553,12 +633,15 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     position: relative;
 }
 #lenguajes-img div{
-    padding-top: 30% ;
-
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 #lenguajes img{
-    width: 500px;
-    min-height: 400px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 .lenguaje-div{
@@ -584,6 +667,11 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border: 1px solid #F4FF00;
     margin-top: 10px;
 }
+.lenguajes-btn:hover{
+    width: 200px;
+    transition: ease .5s;
+    background-color: #9326FF;
+}
 .lenguajes-btn a{
     color:  #F4FF00;
     text-decoration: none;
@@ -603,23 +691,43 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: #000;
     padding: 4%;
     font-family: Anonymous Pro;
+    overflow: hidden;
 }
 #formacion-div-h3{
     display: flex;
-    
-    text-align: start;
-}
-#formacion-div h3{
+    text-align: start;  
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 45px;
     padding: 1%;
     margin-right: 10px;
     border-radius: 35px;
     border: 2px solid #FFF;
-    background: rgba(217, 217, 217, 0.00);
     color: #FFF;
     font-size: 25px;
     font-family: Anonymous Pro;
+    position: relative;
+}
+#formacion-div h3::before{
+    margin-left: 50px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 20%;
+    background-color:#000;
+    border-left: 2px solid #FFF;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: 22%;
+    }
+    100%{
+        left: 0%;
+    }
 }
 
 #formacion-div img{
@@ -631,12 +739,11 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 4rem;
     font-size: 25px;
 }
 .formacion-texto{
     margin-left: 3.5rem;
-    margin-top: 5px;
 }
 
 #contacto{
@@ -665,7 +772,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 #contacto-div{
     padding: 4%;
 }
-.input input{
+.formulario__input{
     margin-bottom: 10px;
     height: 40px;
     width: 100%;
@@ -676,14 +783,14 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
 }
 
-.input input::placeholder{
+.formulario__input::placeholder{
     color: #FFF;
     font-size: 20px;
     font-family: Anonymous Pro;
     opacity: 80%;
 }
 
-.input{
+input{
     color: rgba(255, 255, 255, 0.80);
     font-size: 25px;
     font-style: normal;
@@ -692,7 +799,7 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-family: Anonymous Pro;
 }
 
-.input textarea{
+input mensaje{
     margin-bottom: 10px;
     height: 200px;
     width: 100%;
@@ -702,14 +809,15 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(2px);
 }
 
-.input textarea::placeholder{
+input mensaje::placeholder{
     color: #FFF;
     font-size: 20px;
     font-family: Anonymous Pro;
     opacity: 80%;
 }
 
-#form-btn{
+#button{
+    margin-top: 2%;
     color: #FFF;
     font-family: Anonymous Pro;
     font-size: 22px;
@@ -731,31 +839,131 @@ box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     font-style: normal;
 }
 
-[data-animation="fade"]{
-    opacity:0 ;
-    transform: translate(100%);
-    transition: .6s  ease-in .3s;
-    --opacity: 1;
-    --transform: translate(0);
+.hidden1 {
+    opacity:0;
+    transform:scale(0.8);
+    transition: all ease-in 1.2s;
+}
+.hidden2 {
+  
+    opacity:0;
+    transition: all ease-in 1.2s;
+    transform: translateX(-100%);
+}
+.hidden3 {
+  
+    opacity:0;
+    transform:translateY(100%);
+    transition: all ease-out 1.2s;
+} 
+
+.mostrar {
+    
+    opacity:1;
+    transform:scale(1);
+    
 }
 
-[data-animation="show"]{
-    opacity:0 ;
-    transform: translate(100%);
-    transition: .6s  ease-in .3s;
-    --opacity: 1;
-    --transform: scale(1);
+
+.formulario__label {
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
 }
 
-[data-animation="up"]{
-    opacity:0 ;
-    transform: translateY(100%);
-    transition: .6s  ease-in .3s;
-    --opacity: 1;
-    --transform: translateY(0);
+.formulario__grupo-input {
+	position: relative;
 }
 
-.unset{
-    opacity: var(--opacity);
-    transform: var(--transform);
+
+.formulario__input:focus {
+	border: 3px solid #0075FF;
+	outline: none;
+	box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+}
+
+.formulario__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+.formulario__input-error-activo {
+	display: block;
+}
+
+.formulario__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+.formulario__checkbox {
+	margin-right: 10px;
+}
+
+.formulario__grupo-terminos, 
+.formulario__mensaje,
+.formulario__grupo-btn-enviar {
+	grid-column: span 2;
+}
+
+.formulario__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario__mensaje-activo {
+	display: block;
+}
+
+.formulario__mensaje p {
+	margin: 0;
+}
+
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.formulario__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.formulario__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+
+.formulario__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.formulario__grupo-correcto .formulario__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__label {
+	color: #bb2929;
+}
+
+.formulario__grupo-incorrecto .formulario__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.formulario__grupo-incorrecto .formulario__input {
+	border: 3px solid #bb2929;
 }
