@@ -11,7 +11,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 },
 
-{threshold: .8}
+{threshold: .5}
 );
 
 seccionesOcultas1.forEach((seccion)=>observer.observe(seccion));
